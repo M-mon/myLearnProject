@@ -1,0 +1,28 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: gateway-zuul-demo
+eureka:
+  instance:
+    prefer-ip-address: true
+    # 每隔Xs发送一次心跳
+    lease-renewal-interval-in-seconds: 5
+    # 告知服务端X秒还未收到心跳的话，就将该服务移除列表
+    lease-expiration-duration-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+zuul:
+  routes:
+  #    product和cart都是扫描到的路由名
+  #    未结合eureka
+  #    product: http://localhost:8082/product/**
+  #    cart: http://localhost:8081/cart/**
+  #    结合eureka-client
+  #    product: /product/**
+  #    cart: /cart/**
+#    还有很多用法
+    eureka-client-test: /test/**

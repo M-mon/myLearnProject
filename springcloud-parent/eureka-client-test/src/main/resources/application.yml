@@ -1,0 +1,25 @@
+eureka:
+  instance:
+    # 每隔X s发送一次心跳
+    lease-renewal-interval-in-seconds: 5
+    # 告知服务端X 秒还未收到心跳的话，就将该服务移除列表
+    lease-expiration-duration-in-seconds: 10
+    hostname: localhost
+#    statusPageUrl: https://${eureka.hostname}/info
+#    healthCheckUrl: https://${eureka.hostname}/health
+#    homePageUrl: https://${eureka.hostname}/
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8762
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: eureka-client-test
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false

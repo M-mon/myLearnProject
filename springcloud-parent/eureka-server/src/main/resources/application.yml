@@ -1,0 +1,24 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  #    statusPageUrl: https://${eureka.hostname}/info
+  #    healthCheckUrl: https://${eureka.hostname}/health
+  #    homePageUrl: https://${eureka.hostname}/
+  server:
+    # 关闭自我保护机制
+    enable-self-preservation: false
+    # 每隔10s扫描服务列表，移除失效服务
+    eviction-interval-timer-in-ms: 5000
+  client:
+    #显式定义客户端注册机制为心跳机制
+    healthcheck:
+      enabled: true
+    #表示是否将自己注册到Eureka Server，默认为true。
+    registerWithEureka: false
+    #表示是否从Eureka Server获取注册信息，默认为true。
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
