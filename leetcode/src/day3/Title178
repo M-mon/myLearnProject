@@ -68,5 +68,3 @@ else @curRank:=@curRank +1
 end )*1) as Rank
 FROM Scores,(select @curRank:=0,@prevRank:=NULL) p
 ORDER BY Score desc
-
---考核点：手动排序方式
