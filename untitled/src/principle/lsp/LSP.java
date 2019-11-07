@@ -1,4 +1,4 @@
-package lsp;
+package principle.lsp;
 
 /**
  * @Description 里氏替换原则在“几维鸟不是鸟”实例中的应用。
