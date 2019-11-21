@@ -6,9 +6,8 @@ package principle.lkp;
  * @create 2019-11-06 23:40
  */
 public class LKP {
-    public static void main(String[] args)
-    {
-        Agent agent=new Agent();
+    public static void main(String[] args) {
+        Agent agent = new Agent();
         agent.setStar(new Star("林心如"));
         agent.setFans(new Fans("粉丝韩丞"));
         agent.setCompany(new Company("中国传媒有限公司"));
@@ -18,68 +17,67 @@ public class LKP {
 }
 
 //经纪人
-class Agent
-{
+class Agent {
     private Star myStar;
     private Fans myFans;
     private Company myCompany;
-    public void setStar(Star myStar)
-    {
-        this.myStar=myStar;
+
+    public void setStar(Star myStar) {
+        this.myStar = myStar;
     }
-    public void setFans(Fans myFans)
-    {
-        this.myFans=myFans;
+
+    public void setFans(Fans myFans) {
+        this.myFans = myFans;
     }
-    public void setCompany(Company myCompany)
-    {
-        this.myCompany=myCompany;
+
+    public void setCompany(Company myCompany) {
+        this.myCompany = myCompany;
     }
-    public void meeting()
-    {
-        System.out.println(myFans.getName()+"与明星"+myStar.getName()+"见面了。");
+
+    public void meeting() {
+        System.out.println(myFans.getName() + "与明星" + myStar.getName() + "见面了。");
     }
-    public void business()
-    {
-        System.out.println(myCompany.getName()+"与明星"+myStar.getName()+"洽淡业务。");
+
+    public void business() {
+        System.out.println(myCompany.getName() + "与明星" + myStar.getName() + "洽淡业务。");
     }
 }
+
 //明星
-class Star
-{
+class Star {
     private String name;
-    Star(String name)
-    {
-        this.name=name;
+
+    Star(String name) {
+        this.name = name;
     }
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
 }
+
 //粉丝
-class Fans
-{
+class Fans {
     private String name;
-    Fans(String name)
-    {
-        this.name=name;
+
+    Fans(String name) {
+        this.name = name;
     }
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
 }
+
 //媒体公司
-class Company
-{
+class Company {
     private String name;
-    Company(String name)
-    {
-        this.name=name;
+
+    Company(String name) {
+        this.name = name;
     }
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
 }

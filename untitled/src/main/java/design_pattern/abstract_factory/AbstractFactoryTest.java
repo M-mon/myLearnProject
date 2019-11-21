@@ -68,22 +68,23 @@ class ConcreteProduct22 implements Product2 {
         System.out.println("具体产品22显示...");
     }
 }
+
 //抽象工厂：提供了厂品的生成方法
 interface AbstractFactory {
     public Product1 newProduct1();
+
     public Product2 newProduct2();
 }
 
 //具体工厂：与具体“产品”，是对应的。
 //具体工厂1：实现了厂品的生成方法
 class ConcreteFactory1 implements AbstractFactory {
-    public Product1 newProduct1()
-    {
+    public Product1 newProduct1() {
         System.out.println("具体工厂 1 生成-->具体产品 11...");
         return new ConcreteProduct11();
     }
-    public Product2 newProduct2()
-    {
+
+    public Product2 newProduct2() {
         System.out.println("具体工厂 1 生成-->具体产品 21...");
         return new ConcreteProduct21();
     }
@@ -91,13 +92,12 @@ class ConcreteFactory1 implements AbstractFactory {
 
 //具体工厂2：实现了厂品的生成方法
 class ConcreteFactory2 implements AbstractFactory {
-    public Product1 newProduct1()
-    {
+    public Product1 newProduct1() {
         System.out.println("具体工厂 2 生成-->具体产品 12...");
         return new ConcreteProduct12();
     }
-    public Product2 newProduct2()
-    {
+
+    public Product2 newProduct2() {
         System.out.println("具体工厂 2 生成-->具体产品 22...");
         return new ConcreteProduct22();
     }
@@ -111,7 +111,7 @@ class ReadXML1 {
             //创建文档对象
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
-            Document doc=builder.parse(new File("/MyLearnProject/untitled/src/main/java/design_pattern/abstract_factory/config1.xml"));
+            Document doc = builder.parse(new File("/MyLearnProject/untitled/src/main/java/design_pattern/abstract_factory/config1.xml"));
             //获取包含类名的文本节点
             NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();

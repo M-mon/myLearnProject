@@ -78,7 +78,7 @@ class ReadXML1 {
             //创建文档对象
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
-            Document doc=builder.parse(new File("/MyLearnProject/untitled/src/main/java/design_pattern/factory/config1.xml"));
+            Document doc = builder.parse(new File("/MyLearnProject/untitled/src/main/java/design_pattern/factory/config1.xml"));
             //获取包含类名的文本节点
             NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();

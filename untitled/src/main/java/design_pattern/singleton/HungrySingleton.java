@@ -8,10 +8,13 @@ package design_pattern.singleton;
 public class HungrySingleton {
 
     //类加载即进行实例化，static final  限制修改
-    private static final HungrySingleton instance=new HungrySingleton();
-    private HungrySingleton(){}
-    public static HungrySingleton getInstance()
-    {
+    private static final HungrySingleton instance = new HungrySingleton();
+
+    private HungrySingleton() {
+
+    }
+
+    public static HungrySingleton getInstance() {
         return instance;
     }
 }

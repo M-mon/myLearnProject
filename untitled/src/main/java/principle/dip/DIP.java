@@ -39,14 +39,12 @@ class Customer {
 
     //以下2个是错误例子，顾客每更换一家商店，都要修改一次代码，这明显违背了开闭原则。
     //解决方法是：定义“婺源网店”和“韶关网店”的共同接口 Shop，顾客类面向该接口编程
-    public void shopping(ShaoguanShop shop)
-    {
+    public void shopping(ShaoguanShop shop) {
         //购物
         System.out.println(shop.sell());
     }
 
-    public void shopping(WuyuanShop shop)
-    {
+    public void shopping(WuyuanShop shop) {
         //购物
         System.out.println(shop.sell());
     }

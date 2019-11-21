@@ -1,7 +1,7 @@
 package design_pattern.adapter;
 
 /**
- * @Description  类适配器模式的代码
+ * @Description 类适配器模式的代码
  * @auther hasee
  * @create 2019-11-07 18:42
  */
@@ -26,6 +26,7 @@ class Adaptee {
         System.out.println("适配者中的业务代码被调用！");
     }
 }
+
 //类适配器类
 class ClassAdapter extends Adaptee implements Target {
     public void request() {
